@@ -1,6 +1,7 @@
 /* Colors */
 $white: #fff;
 $black: #000;
+$yellow-dirty: #b88b58;
 
 /* Font sizes */
 $font-size-13: 13px;
@@ -11,3 +12,6 @@ $font-size-20: 20px;
 $font-size-26: 26px;
 
 /* Fonts */
+@import "../fonts/Montserrat-Bold.ttf";
+
+$font-montserrat-bold: "Montserrat-Bold", arial;
