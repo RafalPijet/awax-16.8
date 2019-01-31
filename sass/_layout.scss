@@ -96,13 +96,45 @@ header {
       margin: 0;
 
       li {
-        color: $white;
         display: inline-block;
         text-transform: uppercase;
-        cursor: pointer;
+        position: relative;
+
+        &:hover {
+          .vertical-menu {
+            transform: scaleY(1);
+          }
+        }
+
+        a {
+          color: $white;
+          text-decoration: none;
+        }
 
         p {
           margin: 0 11px;
+        }
+
+        .vertical-menu {
+          display: block;
+          position: absolute;
+          background-color: $black;
+          top: 60px;
+          left: 0;
+          padding: 0;
+          width: -webkit-fill-available;
+          text-align: center;
+          transform-origin: 50% 0;
+          transform: scaleY(0);
+          transition: transform .1s;
+
+          li {
+            padding: 10px 0;
+
+            a:hover {
+              color: $yellow-dirty;
+            }
+          }
         }
 
         .line {

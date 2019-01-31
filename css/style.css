@@ -454,14 +454,44 @@ header nav ul {
 }
 
 header nav ul li {
-  color: #fff;
   display: inline-block;
   text-transform: uppercase;
-  cursor: pointer;
+  position: relative;
+}
+
+header nav ul li:hover .vertical-menu {
+  transform: scaleY(1);
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
 }
 
 header nav ul li p {
   margin: 0 11px;
+}
+
+header nav ul li .vertical-menu {
+  display: block;
+  position: absolute;
+  background-color: #000;
+  top: 60px;
+  left: 0;
+  padding: 0;
+  width: -webkit-fill-available;
+  text-align: center;
+  transform-origin: 50% 0;
+  transform: scaleY(0);
+  transition: transform .1s;
+}
+
+header nav ul li .vertical-menu li {
+  padding: 10px 0;
+}
+
+header nav ul li .vertical-menu li a:hover {
+  color: #b88b58;
 }
 
 header nav ul li .line {
