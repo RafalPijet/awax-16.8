@@ -244,8 +244,80 @@ body {
 }
 
 .third {
-  //height: 415px;
   background-color: $black;
+}
+
+.fourth {
+  background-color: $white;
+  height: 950px;
+
+  .choice {
+    max-width: 708px;
+    width: 100%;
+    border: 1px solid $grey-text;
+    border-radius: 20px;
+    margin: 0;
+    background-color: $grey-back-menu;
+    margin: 55px auto 0;
+    padding: 0 12px 0 18px;
+
+    li {
+      font-family: $font-montserrat-light;
+      font-size: $font-size-14;
+      display: inline-flex;
+      text-transform: uppercase;
+      text-align: center;
+      height: inherit;
+      margin: 0 3px;
+
+      a {
+        color: inherit;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        padding: 0 16px;
+        position: relative;
+
+        &::after {
+          position: absolute;
+          content: "";
+          width: 100%;
+          height: 5px;
+          background-color: $yellow-dirty;
+          border: none;
+          top: 50px;
+          left: 0;
+          visibility: hidden;
+        }
+
+        &:hover {
+          &::after {
+            visibility: visible;
+          }
+        }
+      }
+
+      .line {
+        width: 1px;
+        height: 52px;
+        background-color: $grey-text;
+        margin: 2px 0 0 10px;
+      }
+    }
+  }
+
+  .gallery {
+    margin-top: 39px;
+
+    img {
+      padding-bottom: 30px;
+    }
+  }
+
+  button {
+    margin: 0 auto 57px;
+    display: block;
+  }
 }
 
 @media(max-width: 767px) {
