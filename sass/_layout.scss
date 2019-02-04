@@ -8,9 +8,15 @@ body {
   padding: 0;
 }
 
-.container {
+.container-fluid {
   width: 100%;
   max-width: 1600px;
+  margin: 0 auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 1110px;
   margin: 0 auto;
 }
 
@@ -99,13 +105,10 @@ body {
   }
 
   nav {
-    margin: 0 auto;
     height: 100px;
-    max-width: 1110px;
-    width: 100%;
 
     &>div {
-      padding-left: 22px;
+      padding-left: 12px;
     }
 
     ul {
@@ -212,17 +215,37 @@ body {
 }
 
 .second {
-  height: 534px;
   background-color: $white;
   position: relative;
+
+  p {
+    font-family: $font-montserrat-light;
+    font-size: $font-size-14;
+    line-height: 1.8;
+    padding: 32px 10px 17px 0;
+  }
+
+  button {
+    margin-bottom: 146px;
+  }
+
+  img {
+    object-fit: none;
+    padding-bottom: 30px;
+  }
 
   .phone {
     position: absolute;
     right: 80px;
     top: -33px;
     cursor: pointer;
-    opacity: .5;
+    opacity: .6;
   }
+}
+
+.third {
+  //height: 415px;
+  background-color: $black;
 }
 
 @media(max-width: 767px) {
