@@ -2,6 +2,12 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: $grey-back;
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   width: 100%;
   max-width: 1600px;
@@ -77,8 +83,20 @@
   visibility: hidden;
 }
 
-header {
-  background-color: $black;
+.color-yellow {
+  color: $yellow-dirty;
+}
+
+.color-white {
+  color: $white;
+}
+
+.first {
+  background-image: url("../images/jumbotron.png");
+
+  &>div {
+    background-color: $black;
+  }
 
   nav {
     margin: 0 auto;
@@ -95,10 +113,12 @@ header {
       font-size: $font-size-13;
       margin: 0;
 
-      li {
-        display: inline-block;
+      .main {
+        display: flex;
         text-transform: uppercase;
         position: relative;
+        align-items: center;
+        height: 100%;
 
         &:hover {
           .vertical-menu {
@@ -109,6 +129,9 @@ header {
         a {
           color: $white;
           text-decoration: none;
+          height: inherit;
+          display: flex;
+          align-items: center;
         }
 
         p {
@@ -119,10 +142,11 @@ header {
           display: block;
           position: absolute;
           background-color: $black;
-          top: 60px;
+          top: 100px;
           left: 0;
           padding: 0;
-          width: -webkit-fill-available;
+          width: 100%;
+          list-style: none;
           text-align: center;
           transform-origin: 50% 0;
           transform: scaleY(0);
@@ -130,6 +154,11 @@ header {
 
           li {
             padding: 10px 0;
+            position: relative;
+
+            a {
+              justify-content: center;
+            }
 
             a:hover {
               color: $yellow-dirty;
@@ -137,20 +166,62 @@ header {
           }
         }
 
-        .line {
-          height: 6px;
-          margin-top: 40px;
-          width: inherit;
-          background-color: $yellow-dirty;
-        }
-
         &:hover {
-          .line {
+          &::after {
             visibility: visible;
           }
         }
+
+        &::after {
+          position: absolute;
+          content: "";
+          height: 6px;
+          background-color: $yellow-dirty;
+          width: 100%;
+          bottom: 0;
+          visibility: hidden;
+        }
       }
     }
+  }
+
+  .hero {
+    font-family: $font-montserrat-bold;
+    background: none;
+
+    h1 {
+      font-size: $font-size-72;
+      margin: 0;
+      line-height: .95;
+
+      &:first-child {
+        margin-top: 233px;
+      }
+    }
+
+    h4 {
+      font-family: $font-montserrat-semibold;
+      font-size: $font-size-24;
+      margin: 17px 0 0;
+    }
+
+    button {
+      margin: 45px 0 245px;
+    }
+  }
+}
+
+.second {
+  height: 534px;
+  background-color: $white;
+  position: relative;
+
+  .phone {
+    position: absolute;
+    right: 80px;
+    top: -33px;
+    cursor: pointer;
+    opacity: .5;
   }
 }
 

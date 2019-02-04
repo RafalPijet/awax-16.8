@@ -344,6 +344,12 @@ template {
   box-sizing: border-box;
 }
 
+body {
+  background-color: #282828;
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   width: 100%;
   max-width: 1600px;
@@ -432,77 +438,147 @@ template {
   visibility: hidden;
 }
 
-header {
+.color-yellow {
+  color: #b88b58;
+}
+
+.color-white {
+  color: #fff;
+}
+
+.first {
+  background-image: url("../images/jumbotron.png");
+}
+
+.first > div {
   background-color: #000;
 }
 
-header nav {
+.first nav {
   margin: 0 auto;
   height: 100px;
   max-width: 1110px;
   width: 100%;
 }
 
-header nav > div {
+.first nav > div {
   padding-left: 22px;
 }
 
-header nav ul {
+.first nav ul {
   font-family: "Montserrat-Bold", arial;
   font-size: 13px;
   margin: 0;
 }
 
-header nav ul li {
-  display: inline-block;
+.first nav ul .main {
+  display: -ms-flexbox;
+  display: flex;
   text-transform: uppercase;
   position: relative;
+  -ms-flex-align: center;
+      align-items: center;
+  height: 100%;
 }
 
-header nav ul li:hover .vertical-menu {
+.first nav ul .main:hover .vertical-menu {
   transform: scaleY(1);
 }
 
-header nav ul li a {
+.first nav ul .main a {
   color: #fff;
   text-decoration: none;
+  height: inherit;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
 }
 
-header nav ul li p {
+.first nav ul .main p {
   margin: 0 11px;
 }
 
-header nav ul li .vertical-menu {
+.first nav ul .main .vertical-menu {
   display: block;
   position: absolute;
   background-color: #000;
-  top: 60px;
+  top: 100px;
   left: 0;
   padding: 0;
-  width: -webkit-fill-available;
+  width: 100%;
+  list-style: none;
   text-align: center;
   transform-origin: 50% 0;
   transform: scaleY(0);
   transition: transform .1s;
 }
 
-header nav ul li .vertical-menu li {
+.first nav ul .main .vertical-menu li {
   padding: 10px 0;
+  position: relative;
 }
 
-header nav ul li .vertical-menu li a:hover {
+.first nav ul .main .vertical-menu li a {
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.first nav ul .main .vertical-menu li a:hover {
   color: #b88b58;
 }
 
-header nav ul li .line {
-  height: 6px;
-  margin-top: 40px;
-  width: inherit;
-  background-color: #b88b58;
+.first nav ul .main:hover::after {
+  visibility: visible;
 }
 
-header nav ul li:hover .line {
-  visibility: visible;
+.first nav ul .main::after {
+  position: absolute;
+  content: "";
+  height: 6px;
+  background-color: #b88b58;
+  width: 100%;
+  bottom: 0;
+  visibility: hidden;
+}
+
+.first .hero {
+  font-family: "Montserrat-Bold", arial;
+  background: none;
+}
+
+.first .hero h1 {
+  font-size: 72px;
+  margin: 0;
+  line-height: .95;
+}
+
+.first .hero h1:first-child {
+  margin-top: 233px;
+}
+
+.first .hero h4 {
+  font-family: "montserrat_semibold", arial;
+  font-size: 24px;
+  margin: 17px 0 0;
+}
+
+.first .hero button {
+  margin: 45px 0 245px;
+}
+
+.second {
+  height: 534px;
+  background-color: #fff;
+  position: relative;
+}
+
+.second .phone {
+  position: absolute;
+  right: 80px;
+  top: -33px;
+  cursor: pointer;
+  opacity: .5;
 }
 
 @media (max-width: 767px) {
@@ -758,6 +834,18 @@ header nav ul li:hover .line {
 }
 
 /* Components */
+.component__button {
+  font-family: "Montserrat-Bold", arial;
+  font-size: 13px;
+  width: 195px;
+  height: 45px;
+  background-color: #b88b58;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
 /* Sections */
 /* Pages / Views */
 /*# sourceMappingURL=style.css.map */
