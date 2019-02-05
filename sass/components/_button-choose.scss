@@ -1,0 +1,17 @@
+.component__button-choose {
+  font-family: $font-montserrat-bold;
+  font-size: $font-size-12;
+  width: 130px;
+  height: 45px;
+  background-color: $grey-button;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  color: $white;
+  margin: 28px 0 33px;
+
+  &:hover {
+    background-color: $yellow-dirty;
+  }
+}

@@ -1,0 +1,42 @@
+.component__price-table {
+  height: 100%;
+  width: 100%;
+  max-height: 344px;
+  max-width: 255px;
+  background-color: $white;
+  text-align: center;
+
+  h4 {
+    font-family: $font-montserrat-regular;
+    font-size: $font-size-14;
+    color: $grey-price;
+    font-weight: 300;
+    margin: 31px 0 12px;
+  }
+
+  h2 {
+    font-family: $font-montserrat-bold;
+    font-size: $font-size-30;
+    color: $grey-price;
+    margin: 0;
+  }
+
+  h5 {
+    font-family: $font-montserrat-regular;
+    font-size: $font-size-10;
+    color: $grey-position;
+    margin: 0;
+    line-height: .55;
+    font-weight: 500;
+
+    p {
+      transform: rotate(90deg);
+      color: $grey-position;
+    }
+  }
+
+  .color-grey-text {
+    color: $grey-text;
+    padding: 2px 0 25px;
+  }
+}
