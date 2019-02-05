@@ -634,10 +634,7 @@ body {
 .fourth .choice li a {
   color: inherit;
   text-decoration: none;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
+  margin: auto;
   padding: 0 16px;
   position: relative;
 }
@@ -649,7 +646,7 @@ body {
   height: 5px;
   background-color: #b88b58;
   border: none;
-  top: 50px;
+  top: 30px;
   left: 0;
   visibility: hidden;
 }
@@ -676,6 +673,15 @@ body {
 .fourth button {
   margin: 0 auto 57px;
   display: block;
+}
+
+.fifth {
+  background-image: url("../images/ourteamback.png");
+}
+
+.fifth .workers {
+  padding-top: 42px;
+  padding-bottom: 100px;
 }
 
 @media (max-width: 767px) {
@@ -990,6 +996,68 @@ body {
   line-height: 1.8;
   text-align: center;
   margin: 0 0 52px 0;
+}
+
+.component__box-worker {
+  background-color: #fff;
+  width: 350px;
+}
+
+.component__box-worker img {
+  -o-object-fit: none;
+     object-fit: none;
+  margin: 48px 0 45px;
+}
+
+.component__box-worker h4 {
+  font-family: "Montserrat-Regular", arial;
+  font-size: 21px;
+  margin: 0;
+  width: 100%;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.component__box-worker p {
+  font-family: "montserrat_light", arial;
+  font-size: 14px;
+  margin: 9px 0 40px;
+  width: 100%;
+  text-align: center;
+}
+
+.component__box-worker .icons {
+  width: 270px;
+  margin-bottom: 44px;
+}
+
+.component__box-worker .icons .icon-btn {
+  margin: 0;
+  width: 33px;
+  height: 33px;
+  background-color: #bebebe;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  transition-duration: .5s;
+}
+
+.component__box-worker .icons .icon-btn .fa {
+  height: 33px;
+  width: 33px;
+  left: -1px;
+  top: 6px;
+  position: absolute;
+  color: #fff;
+}
+
+.component__box-worker .icons .icon-btn .fa.punto {
+  top: 0;
+}
+
+.component__box-worker .icons .icon-btn.icon-btn:hover {
+  background-color: #b88b58;
 }
 
 /* Sections */

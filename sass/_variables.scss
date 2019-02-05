@@ -5,6 +5,7 @@ $yellow-dirty: #b88b58;
 $grey-back: #282828;
 $grey-text: #aeaeae;
 $grey-back-menu: #ededed;
+$grey-icon: #bebebe;
 
 /* Font sizes */
 $font-size-12: 12px;
@@ -13,6 +14,7 @@ $font-size-14: 14px;
 $font-size-16: 16px;
 $font-size-18: 18px;
 $font-size-20: 20px;
+$font-size-21: 21px;
 $font-size-24: 24px;
 $font-size-26: 26px;
 $font-size-30: 30px;
@@ -22,7 +24,9 @@ $font-size-72: 72px;
 @import "../fonts/Montserrat-Bold.ttf";
 @import "../fonts/montserrat_semibold.ttf";
 @import "../fonts/montserrat_light.ttf";
+@import "../fonts/Montserrat-Regular.ttf";
 
 $font-montserrat-bold: "Montserrat-Bold", arial;
 $font-montserrat-semibold: "montserrat_semibold", arial;
 $font-montserrat-light: "montserrat_light", arial;
+$font-montserrat-regular: "Montserrat-Regular", arial;
