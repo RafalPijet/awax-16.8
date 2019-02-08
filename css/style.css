@@ -440,6 +440,11 @@ body {
       align-content: flex-end;
 }
 
+.flex-content-between {
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+}
+
 .hidden {
   visibility: hidden;
 }
@@ -449,6 +454,27 @@ body {
 }
 
 .color-white {
+  color: #fff;
+}
+
+.prop-icon-btn, .tenth .social div .icon-btn, .thirteenth .footer .social .icon-btn {
+  margin: 0;
+  width: 33px;
+  height: 33px;
+  border: none;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  transition-duration: .5s;
+}
+
+.prop-fa, .tenth .social div .icon-btn .fa, .thirteenth .footer .social .icon-btn .fa {
+  height: 33px;
+  width: 33px;
+  left: 0;
+  top: 6px;
+  position: absolute;
   color: #fff;
 }
 
@@ -858,18 +884,6 @@ body {
   margin-left: 5px;
 }
 
-.tenth .social div .icon-btn {
-  margin: 0;
-  width: 33px;
-  height: 33px;
-  border: none;
-  border-radius: 50%;
-  position: relative;
-  cursor: pointer;
-  font-size: 20px;
-  transition-duration: .5s;
-}
-
 .tenth .social div .icon-btn.twitter {
   background-color: #34c5f0;
 }
@@ -894,17 +908,145 @@ body {
   background-color: #b71c29;
 }
 
-.tenth .social div .icon-btn .fa {
-  height: 33px;
-  width: 33px;
-  left: 0;
-  top: 6px;
-  position: absolute;
-  color: #fff;
+.tenth .social div .icon-btn.pinterest .fa {
+  top: 8px;
 }
 
 .tenth .social div .icon-btn.icon-btn:hover {
   background-color: #b88b58;
+}
+
+.eleventh {
+  background-color: #f7f7f7;
+}
+
+.eleventh form {
+  font-family: "montserrat_light", arial;
+  font-size: 13px;
+  color: #aeaeae;
+  padding-top: 95px;
+  width: 100%;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+.eleventh form div {
+  border-bottom: 3px solid #aeaeae;
+  width: inherit;
+}
+
+.eleventh form div input {
+  border: none;
+  background-color: #f7f7f7;
+  padding-bottom: 15px;
+  width: inherit;
+}
+
+.eleventh form button {
+  margin: 52px auto 75px;
+}
+
+.eleventh form .first {
+  max-width: 256px;
+  width: 100%;
+}
+
+.eleventh form .second {
+  margin: 46px 0 88px;
+}
+
+.twelveth {
+  background-image: url("../images/map.png");
+}
+
+.twelveth .adress {
+  background: inherit;
+  width: 100%;
+  height: inherit;
+  max-width: 540px;
+  padding: 36px 0 33px;
+}
+
+.twelveth .adress .back {
+  padding: 54px 0 49px 40px;
+  background-color: #fff;
+  border-radius: 3px;
+  font-family: "montserrat_light", arial;
+  color: #aeaeae;
+  height: inherit;
+}
+
+.twelveth .adress .back h6 {
+  font-size: 12px;
+  font-weight: 500;
+  margin: 18px 0 18px 18px;
+}
+
+.thirteenth {
+  position: relative;
+  background-color: #000;
+}
+
+.thirteenth .arrow {
+  position: absolute;
+  top: -34px;
+  left: 88px;
+}
+
+.thirteenth .footer {
+  padding: 31px 0;
+}
+
+.thirteenth .footer .social .icon-btn {
+  background-color: #373737;
+  margin-right: 7px;
+}
+
+.thirteenth .footer .social .icon-btn .fa.punto {
+  top: 0;
+}
+
+.thirteenth .footer .social .icon-btn:hover {
+  background-color: #b88b58;
+}
+
+.thirteenth .footer .social h5 {
+  font-family: "Montserrat-Regular", arial;
+  font-size: 14px;
+  color: #fff;
+  width: 100%;
+}
+
+.thirteenth .footer .description {
+  font-family: "montserrat_light", arial;
+  font-size: 12px;
+  color: #aeaeae;
+  line-height: 2;
+}
+
+.thirteenth .footer .subs {
+  width: 100%;
+  max-width: 350px;
+  height: 200px;
+  background-color: #373737;
+  border-radius: 3px;
+}
+
+.thirteenth .footer .subs h5 {
+  font-family: "montserrat_light", arial;
+  font-size: 13px;
+  font-weight: 400;
+  text-decoration: underline;
+  color: #aeaeae;
+  margin: 51px 0 16px;
+}
+
+.thirteenth .footer .subs .line {
+  width: 100%;
+  max-width: 220px;
+  height: 2px;
+  background-color: #aeaeae;
+  margin-bottom: 28px;
 }
 
 @media (max-width: 767px) {
