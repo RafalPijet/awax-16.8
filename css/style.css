@@ -385,26 +385,6 @@ body {
   text-align: left;
 }
 
-.flex-start {
-  -ms-flex-pack: start;
-      justify-content: flex-start;
-}
-
-.flex-center {
-  -ms-flex-pack: center;
-      justify-content: center;
-}
-
-.flex-end {
-  -ms-flex-pack: end;
-      justify-content: flex-end;
-}
-
-.flex-around {
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
 .flex-start-align {
   -ms-flex-align: start;
       align-items: flex-start;
@@ -612,6 +592,7 @@ body {
   -o-object-fit: none;
      object-fit: none;
   padding-bottom: 30px;
+  cursor: pointer;
 }
 
 .second .phone {
@@ -628,7 +609,7 @@ body {
 
 .fourth {
   background-color: #f7f7f7;
-  height: 950px;
+  padding-bottom: 2px;
 }
 
 .fourth .choice {
@@ -789,21 +770,21 @@ body {
 }
 
 .ninth .more {
-  padding: 57px 0 0 31px;
+  padding: 57px 0 0 103px;
 }
 
 .ninth .more h3 {
   font-family: "Montserrat-Bold", arial;
   font-size: 21px;
   margin: 21px 0 10px;
+  position: relative;
 }
 
-.ninth .more h3:nth-of-type(2) {
-  margin: 42px 0 10px;
-}
-
-.ninth .more h3:nth-of-type(3) {
-  margin: 35px 0 10px;
+.ninth .more h3::before {
+  position: absolute;
+  content: url("../images/bird.png");
+  top: 0;
+  left: -65px;
 }
 
 .ninth .more p {
@@ -942,7 +923,7 @@ body {
   margin: 52px auto 75px;
 }
 
-.eleventh form .first {
+.eleventh form .first-line {
   max-width: 256px;
   width: 100%;
 }
@@ -985,6 +966,7 @@ body {
 
 .thirteenth .arrow {
   position: absolute;
+  cursor: pointer;
   top: -34px;
   left: 88px;
 }
@@ -1106,6 +1088,17 @@ body {
         flex: 0 0 100%;
     max-width: 100%;
   }
+  .flex-center-sm {
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
+  .flex-between-sm {
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+  }
+  .text-center-sm {
+    text-align: center;
+  }
   .first {
     margin-top: 464px;
   }
@@ -1148,6 +1141,45 @@ body {
   }
   .first .hero h1 {
     font-size: 30px;
+  }
+  .second p {
+    padding: 0 20px;
+  }
+  .fourth .choice {
+    max-width: 390px;
+    padding: 0 0 0 9px;
+  }
+  .fourth .choice li {
+    font-size: 10px;
+  }
+  .fourth .choice li a {
+    padding: 0;
+  }
+  .fourth .choice li a::after {
+    top: 25px;
+  }
+  .fifth {
+    background-size: cover;
+  }
+  .fifth .workers .component__box-worker {
+    margin: 10px;
+  }
+  .seventh img {
+    padding: 10px;
+  }
+  .eighth .offers .component__price-table {
+    margin: 10px;
+  }
+  .tenth .component__fact {
+    margin: 10px 20px;
+  }
+  .eleventh form .first-line {
+    max-width: 100%;
+    margin: 30px 0;
+  }
+  .twelveth {
+    background-size: cover;
+    background-position: center;
   }
 }
 
@@ -1216,6 +1248,10 @@ body {
     -ms-flex-pack: center;
         justify-content: center;
   }
+  .flex-between-md {
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+  }
   .first {
     background-size: cover;
     background-position: center;
@@ -1228,6 +1264,29 @@ body {
   }
   .first .hero h1 {
     font-size: 30px;
+  }
+  .second img {
+    -o-object-fit: scale-down;
+       object-fit: scale-down;
+  }
+  .fifth {
+    background-size: cover;
+  }
+  .fifth .workers .component__box-worker {
+    margin: 10px;
+  }
+  .seventh img {
+    padding: 0 10px;
+  }
+  .eighth .offers .component__price-table {
+    margin: 10px;
+  }
+  .tenth .component__fact {
+    margin: 10px;
+  }
+  .twelveth {
+    background-size: cover;
+    background-position: center;
   }
 }
 
@@ -1291,6 +1350,10 @@ body {
     -ms-flex: 0 0 100%;
         flex: 0 0 100%;
     max-width: 100%;
+  }
+  .flex-between-lg {
+    -ms-flex-pack: justify;
+        justify-content: space-between;
   }
   .first nav ul {
     font-size: 13px;
@@ -1365,8 +1428,43 @@ body {
     -ms-flex-pack: justify;
         justify-content: space-between;
   }
+  .flex-center {
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
+  .flex-start {
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+  }
+  .flex-end {
+    -ms-flex-pack: end;
+        justify-content: flex-end;
+  }
+  .flex-around {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
   .first .hero h1 {
     font-size: 72px;
+  }
+  .second img {
+    -o-object-fit: none;
+       object-fit: none;
+  }
+  .fifth {
+    background-size: auto;
+  }
+  .fifth .workers .component__box-worker {
+    margin: 0;
+  }
+  .eighth .offers .component__price-table {
+    margin: 0;
+  }
+  .tenth .component__fact {
+    margin: 0;
+  }
+  .twelveth {
+    background-size: auto;
   }
 }
 

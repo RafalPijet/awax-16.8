@@ -41,22 +41,6 @@ body {
   text-align: left;
 }
 
-.flex-start {
-  justify-content: flex-start;
-}
-
-.flex-center {
-  justify-content: center;
-}
-
-.flex-end {
-  justify-content: flex-end;
-}
-
-.flex-around {
-  justify-content: space-around;
-}
-
 .flex-start-align {
   align-items: flex-start;
 }
@@ -254,6 +238,7 @@ body {
   img {
     object-fit: none;
     padding-bottom: 30px;
+    cursor: pointer;
   }
 
   .phone {
@@ -271,7 +256,7 @@ body {
 
 .fourth {
   background-color: $white-dirty;
-  height: 950px;
+  padding-bottom: 2px;
 
   .choice {
     max-width: 708px;
@@ -433,19 +418,19 @@ body {
   }
 
   .more {
-    padding: 57px 0 0 31px;
+    padding: 57px 0 0 103px;
 
     h3 {
       font-family: $font-montserrat-bold;
       font-size: $font-size-21;
       margin: 21px 0 10px;
+      position: relative;
 
-      &:nth-of-type(2) {
-        margin: 42px 0 10px;
-      }
-
-      &:nth-of-type(3) {
-        margin: 35px 0 10px;
+      &::before {
+        position: absolute;
+        content: url("../images/bird.png");
+        top: 0;
+        left: -65px;
       }
     }
 
@@ -598,7 +583,7 @@ body {
       margin: 52px auto 75px;
     }
 
-    .first {
+    .first-line {
       max-width: 256px;
       width: 100%;
     }
@@ -642,6 +627,7 @@ body {
 
   .arrow {
     position: absolute;
+    cursor: pointer;
     top: -34px;
     left: 88px;
   }
@@ -714,6 +700,18 @@ body {
 @media(max-width: 767px) {
   @include grid("sm");
 
+  .flex-center-sm {
+    justify-content: center;
+  }
+
+  .flex-between-sm {
+    justify-content: space-between;
+  }
+
+  .text-center-sm {
+    text-align: center;
+  }
+
   .first {
     margin-top: 464px;
 
@@ -726,9 +724,11 @@ body {
         padding: 0;
         background-color: $black;
       }
+
       img {
         margin: 25px auto;
       }
+
       ul {
 
         .main {
@@ -769,11 +769,81 @@ body {
         }
       }
     }
+
     .hero {
       h1 {
         font-size: $font-size-30;
       }
     }
+  }
+
+  .second {
+    p {
+      padding: 0 20px;
+    }
+  }
+
+  .fourth {
+    .choice {
+      max-width: 390px;
+      padding: 0 0 0 9px;
+
+      li {
+        font-size: $font-size-10;
+
+        a {
+          padding: 0;
+
+          &::after {
+            top: 25px;
+          }
+        }
+      }
+    }
+  }
+
+  .fifth {
+    background-size: cover;
+
+    .workers {
+      .component__box-worker {
+        margin: 10px;
+      }
+    }
+  }
+
+  .seventh {
+    img {
+      padding: 10px;
+    }
+  }
+
+  .eighth {
+    .offers {
+      .component__price-table {
+        margin: 10px;
+      }
+    }
+  }
+
+  .tenth {
+    .component__fact {
+      margin: 10px 20px;
+    }
+  }
+
+  .eleventh {
+    form {
+      .first-line {
+        max-width: 100%;
+        margin: 30px 0;
+      }
+    }
+  }
+
+  .twelveth {
+    background-size: cover;
+    background-position: center;
   }
 }
 
@@ -782,6 +852,10 @@ body {
 
   .flex-center-md {
     justify-content: center;
+  }
+
+  .flex-between-md {
+    justify-content: space-between;
   }
 
   .first {
@@ -806,18 +880,64 @@ body {
       }
     }
   }
+
+  .second {
+    img {
+      object-fit: scale-down;
+    }
+  }
+
+  .fifth {
+    background-size: cover;
+
+    .workers {
+      .component__box-worker {
+        margin: 10px;
+      }
+    }
+  }
+
+  .seventh {
+    img {
+      padding: 0 10px;
+    }
+  }
+
+  .eighth {
+    .offers {
+      .component__price-table {
+        margin: 10px;
+      }
+    }
+  }
+
+  .tenth {
+    .component__fact {
+      margin: 10px;
+    }
+  }
+
+  .twelveth {
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 @media(min-width: 992px) {
   @include grid("lg");
 
-  .first {
+  .flex-between-lg {
+    justify-content: space-between;
+  }
 
+
+  .first {
     nav {
       ul {
         font-size: $font-size-13;
       }
     }
+
     .hero {
       h1 {
         font-size: $font-size-48;
@@ -833,11 +953,61 @@ body {
     justify-content: space-between;
   }
 
+  .flex-center {
+    justify-content: center;
+  }
+
+  .flex-start {
+    justify-content: flex-start;
+  }
+
+  .flex-end {
+    justify-content: flex-end;
+  }
+
+  .flex-around {
+    justify-content: space-around;
+  }
+
   .first {
     .hero {
       h1 {
         font-size: $font-size-72;
       }
     }
+  }
+
+  .second {
+    img {
+      object-fit: none;
+    }
+  }
+
+  .fifth {
+    background-size: auto;
+
+    .workers {
+      .component__box-worker {
+        margin: 0;
+      }
+    }
+  }
+
+  .eighth {
+    .offers {
+      .component__price-table {
+        margin: 0;
+      }
+    }
+  }
+
+  .tenth {
+    .component__fact {
+      margin: 0;
+    }
+  }
+
+  .twelveth {
+    background-size: auto;
   }
 }
