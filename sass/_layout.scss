@@ -53,10 +53,6 @@ body {
   justify-content: flex-end;
 }
 
-.flex-between {
-  justify-content: space-between;
-}
-
 .flex-around {
   justify-content: space-around;
 }
@@ -140,6 +136,7 @@ body {
       font-family: $font-montserrat-bold;
       font-size: $font-size-13;
       margin: 0;
+      padding: 0;
 
       .main {
         display: flex;
@@ -716,16 +713,131 @@ body {
 
 @media(max-width: 767px) {
   @include grid("sm");
+
+  .first {
+    margin-top: 464px;
+
+    nav {
+      position: fixed;
+      top: 0;
+      z-index: 10;
+
+      &>div {
+        padding: 0;
+        background-color: $black;
+      }
+      img {
+        margin: 25px auto;
+      }
+      ul {
+
+        .main {
+          background-color: $black;
+          border: 1px solid $white;
+          width: 50%;
+          cursor: pointer;
+
+          a {
+            margin: 0 auto;
+            font-size: $font-size-14;
+          }
+
+          &:hover {
+            .vertical-menu {
+              transform: scaleY(1);
+              z-index: 20;
+              top: 80px
+            }
+          }
+
+          .vertical-menu {
+            li:hover {
+              .vertical-menu {
+                transform: scaleY(1);
+                z-index: 20;
+              }
+            }
+          }
+
+          &::after {
+            height: 12px;
+          }
+
+          &:last-child {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .hero {
+      h1 {
+        font-size: $font-size-30;
+      }
+    }
+  }
 }
 
 @media(min-width: 768px) {
   @include grid("md");
+
+  .flex-center-md {
+    justify-content: center;
+  }
+
+  .first {
+    background-size: cover;
+    background-position: center;
+
+    nav {
+      ul {
+        font-size: $font-size-10;
+
+        .main {
+          p {
+            margin: 0 7px;
+          }
+        }
+      }
+    }
+
+    .hero {
+      h1 {
+        font-size: $font-size-30;
+      }
+    }
+  }
 }
 
 @media(min-width: 992px) {
   @include grid("lg");
+
+  .first {
+
+    nav {
+      ul {
+        font-size: $font-size-13;
+      }
+    }
+    .hero {
+      h1 {
+        font-size: $font-size-48;
+      }
+    }
+  }
 }
 
 @media(min-width: 1200px) {
   @include grid("xl");
+
+  .flex-between {
+    justify-content: space-between;
+  }
+
+  .first {
+    .hero {
+      h1 {
+        font-size: $font-size-72;
+      }
+    }
+  }
 }

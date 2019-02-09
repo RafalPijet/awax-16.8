@@ -400,11 +400,6 @@ body {
       justify-content: flex-end;
 }
 
-.flex-between {
-  -ms-flex-pack: justify;
-      justify-content: space-between;
-}
-
 .flex-around {
   -ms-flex-pack: distribute;
       justify-content: space-around;
@@ -498,6 +493,7 @@ body {
   font-family: "Montserrat-Bold", arial;
   font-size: 13px;
   margin: 0;
+  padding: 0;
 }
 
 .first nav ul .main {
@@ -1110,6 +1106,49 @@ body {
         flex: 0 0 100%;
     max-width: 100%;
   }
+  .first {
+    margin-top: 464px;
+  }
+  .first nav {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+  }
+  .first nav > div {
+    padding: 0;
+    background-color: #000;
+  }
+  .first nav img {
+    margin: 25px auto;
+  }
+  .first nav ul .main {
+    background-color: #000;
+    border: 1px solid #fff;
+    width: 50%;
+    cursor: pointer;
+  }
+  .first nav ul .main a {
+    margin: 0 auto;
+    font-size: 14px;
+  }
+  .first nav ul .main:hover .vertical-menu {
+    transform: scaleY(1);
+    z-index: 20;
+    top: 80px;
+  }
+  .first nav ul .main .vertical-menu li:hover .vertical-menu {
+    transform: scaleY(1);
+    z-index: 20;
+  }
+  .first nav ul .main::after {
+    height: 12px;
+  }
+  .first nav ul .main:last-child {
+    width: 100%;
+  }
+  .first .hero h1 {
+    font-size: 30px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1172,6 +1211,23 @@ body {
     -ms-flex: 0 0 100%;
         flex: 0 0 100%;
     max-width: 100%;
+  }
+  .flex-center-md {
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
+  .first {
+    background-size: cover;
+    background-position: center;
+  }
+  .first nav ul {
+    font-size: 10px;
+  }
+  .first nav ul .main p {
+    margin: 0 7px;
+  }
+  .first .hero h1 {
+    font-size: 30px;
   }
 }
 
@@ -1236,6 +1292,12 @@ body {
         flex: 0 0 100%;
     max-width: 100%;
   }
+  .first nav ul {
+    font-size: 13px;
+  }
+  .first .hero h1 {
+    font-size: 48px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -1298,6 +1360,13 @@ body {
     -ms-flex: 0 0 100%;
         flex: 0 0 100%;
     max-width: 100%;
+  }
+  .flex-between {
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+  }
+  .first .hero h1 {
+    font-size: 72px;
   }
 }
 
